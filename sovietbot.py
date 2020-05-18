@@ -3,11 +3,12 @@ import asyncio
 from discord.ext import commands
 import random
 from discord.utils import get
+import os
 
 
 client = commands.Bot(command_prefix='크리스')
 
-token = "NzExNjM0ODM5NjA1ODcwNjkz.XsJk8w.DZpGFjsWUUNkaH5wiAcSH4UJc78"
+token = "access_token"
 
 @client.event
 async def on_ready():
@@ -93,5 +94,5 @@ async def _unmute(ctx, member: discord.Member=None):
 
 
 
-
+access_token = os.environ["BOT_TOKEN"]
 client.run(token)
